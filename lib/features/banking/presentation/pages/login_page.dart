@@ -2,6 +2,7 @@ import 'package:banking_app/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +13,6 @@ class LoginPage extends StatelessWidget {
   }
 
   Widget _buildBody(BuildContext context) {
-    return Text("body");
+    return const Text("body");
   }
 }

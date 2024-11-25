@@ -1,6 +1,7 @@
 import 'package:banking_app/config/theme/app_themes.dart';
 import 'package:banking_app/core/arguments/product_argument.dart';
 import 'package:banking_app/core/providers/cubit_provider.dart';
+import 'package:banking_app/features/banking/presentation/pages/login_page.dart';
 import 'package:banking_app/features/daily_news/presentation/bloc/article/remote/bloc/remote_article_bloc.dart';
 import 'package:banking_app/features/daily_news/presentation/pages/home/daily_news.dart';
 import 'package:banking_app/features/favorite_images/presentation/cubit/favorite_image/favorite_image_cubit.dart';
@@ -142,3 +143,8 @@ Handler historyHandler = Handler(
           create: (context) => sl<HistoryCubit>(),
           child: const HistoryPage(),
         ));
+
+///Banking App Handler]
+Handler loginHandler = Handler(
+    handlerFunc: (BuildContext? context, Map<String, List<String>> params) =>
+        const LoginPage());

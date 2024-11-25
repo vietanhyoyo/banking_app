@@ -16,6 +16,7 @@ class Routes {
   static String auth = "/auth";
   static String cart = "/cart";
   static String history = "/history";
+  static String login = "/login";
 
   /// Setup route for the app
   static void configureRoutes(FluroRouter router) {
@@ -96,6 +97,12 @@ class Routes {
     router.define(
       history,
       handler: historyHandler,
+      transitionType: TransitionType.inFromRight,
+    );
+
+    router.define(
+      login,
+      handler: loginHandler,
       transitionType: TransitionType.inFromRight,
     );
   }
