@@ -1,8 +1,8 @@
-import 'package:clean_architecture/config/routes/routes.dart';
-import 'package:clean_architecture/core/arguments/product_argument.dart';
-import 'package:clean_architecture/core/utils/widgets/nodata_widget.dart';
-import 'package:clean_architecture/features/shopping/presentation/cubit/product_list/product_list_cubit.dart';
-import 'package:clean_architecture/features/shopping/presentation/widgets/product_card.dart';
+import 'package:banking_app/config/routes/routes.dart';
+import 'package:banking_app/core/arguments/product_argument.dart';
+import 'package:banking_app/core/utils/widgets/nodata_widget.dart';
+import 'package:banking_app/features/shopping/presentation/cubit/product_list/product_list_cubit.dart';
+import 'package:banking_app/features/shopping/presentation/widgets/product_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

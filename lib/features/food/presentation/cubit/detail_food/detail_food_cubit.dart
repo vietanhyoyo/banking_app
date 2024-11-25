@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:clean_architecture/features/food/domain/entities/product.dart';
-import 'package:clean_architecture/features/food/domain/usecases/get_product.dart';
+import 'package:banking_app/features/food/domain/entities/product.dart';
+import 'package:banking_app/features/food/domain/usecases/get_product.dart';
 import 'package:equatable/equatable.dart';
 
 part 'detail_food_state.dart';

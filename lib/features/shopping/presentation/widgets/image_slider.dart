@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:clean_architecture/core/utils/widgets/nodata_widget.dart';
-import 'package:clean_architecture/features/shopping/presentation/cubit/slider/slider_cubit.dart';
+import 'package:banking_app/core/utils/widgets/nodata_widget.dart';
+import 'package:banking_app/features/shopping/presentation/cubit/slider/slider_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

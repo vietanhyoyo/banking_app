@@ -1,4 +1,4 @@
-import 'package:clean_architecture/features/daily_news/domain/entities/source.dart';
+import 'package:banking_app/features/daily_news/domain/entities/source.dart';
 import 'package:equatable/equatable.dart';
 
 class ArticleEntity extends Equatable {

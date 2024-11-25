@@ -1,7 +1,7 @@
-import 'package:clean_architecture/core/resources/data_state.dart';
-import 'package:clean_architecture/features/daily_news/domain/usecases/get_article.dart';
+import 'package:banking_app/core/resources/data_state.dart';
+import 'package:banking_app/features/daily_news/domain/usecases/get_article.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:clean_architecture/features/daily_news/domain/entities/article.dart';
+import 'package:banking_app/features/daily_news/domain/entities/article.dart';
 import 'package:dio/dio.dart';
 import 'package:equatable/equatable.dart';
 

@@ -1,6 +1,6 @@
-import 'package:clean_architecture/config/theme/custom_theme.dart';
-import 'package:clean_architecture/core/constants/app_colors.dart';
-import 'package:clean_architecture/core/constants/app_text_style.dart';
+import 'package:banking_app/config/theme/custom_theme.dart';
+import 'package:banking_app/core/constants/app_colors.dart';
+import 'package:banking_app/core/constants/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 final CustomTheme theme = CustomTheme(

@@ -1,4 +1,4 @@
-import 'package:clean_architecture/config/routes/router_handler.dart';
+import 'package:banking_app/config/routes/router_handler.dart';
 import 'package:fluro/fluro.dart';
 
 class Routes {

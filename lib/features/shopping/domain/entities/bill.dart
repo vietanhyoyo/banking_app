@@ -1,5 +1,5 @@
 // BillEntity class to represent the bill
-import 'package:clean_architecture/features/shopping/domain/entities/order.dart';
+import 'package:banking_app/features/shopping/domain/entities/order.dart';
 import 'package:equatable/equatable.dart';
 
 class BillEntity extends Equatable {

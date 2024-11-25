@@ -1,6 +1,6 @@
-import 'package:clean_architecture/features/shopping/domain/entities/product.dart';
-import 'package:clean_architecture/features/shopping/domain/usecases/get_product_details_usecase.dart';
-import 'package:clean_architecture/injection_container.dart';
+import 'package:banking_app/features/shopping/domain/entities/product.dart';
+import 'package:banking_app/features/shopping/domain/usecases/get_product_details_usecase.dart';
+import 'package:banking_app/injection_container.dart';
 import 'package:flutter/material.dart';
 
 class BillProductInfo extends StatefulWidget {

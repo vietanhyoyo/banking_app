@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:clean_architecture/features/favorite_images/data/models/image.dart';
+import 'package:banking_app/features/favorite_images/data/models/image.dart';
 import 'package:flutter/services.dart';
 
 class ImageService {

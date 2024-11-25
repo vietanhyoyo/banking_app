@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:clean_architecture/core/constants/constants.dart';
-import 'package:clean_architecture/core/resources/data_state.dart';
-import 'package:clean_architecture/features/daily_news/data/data_sources/remote/news_api_service.dart';
-import 'package:clean_architecture/features/daily_news/domain/entities/article.dart';
-import 'package:clean_architecture/features/daily_news/domain/repository/article_repository.dart';
+import 'package:banking_app/core/constants/constants.dart';
+import 'package:banking_app/core/resources/data_state.dart';
+import 'package:banking_app/features/daily_news/data/data_sources/remote/news_api_service.dart';
+import 'package:banking_app/features/daily_news/domain/entities/article.dart';
+import 'package:banking_app/features/daily_news/domain/repository/article_repository.dart';
 import 'package:dio/dio.dart';
 
 class ArticleRepositoryImpl implements ArticleRepository {

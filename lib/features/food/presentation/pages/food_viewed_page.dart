@@ -1,6 +1,6 @@
-import 'package:clean_architecture/features/food/domain/entities/product.dart';
-import 'package:clean_architecture/features/food/presentation/cubit/food_main/food_main_cubit.dart';
-import 'package:clean_architecture/features/food/presentation/widgets/dismissible_card.dart';
+import 'package:banking_app/features/food/domain/entities/product.dart';
+import 'package:banking_app/features/food/presentation/cubit/food_main/food_main_cubit.dart';
+import 'package:banking_app/features/food/presentation/widgets/dismissible_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

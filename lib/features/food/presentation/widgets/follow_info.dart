@@ -1,4 +1,4 @@
-import 'package:clean_architecture/core/constants/app_colors.dart';
+import 'package:banking_app/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class FollowInfo extends StatelessWidget {

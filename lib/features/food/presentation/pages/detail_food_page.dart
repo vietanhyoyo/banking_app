@@ -1,8 +1,8 @@
-import 'package:clean_architecture/core/constants/app_colors.dart';
-import 'package:clean_architecture/core/constants/app_text_style.dart';
-import 'package:clean_architecture/features/food/presentation/cubit/food_main/food_main_cubit.dart';
-import 'package:clean_architecture/features/food/presentation/widgets/follow_info.dart';
-import 'package:clean_architecture/features/food/presentation/widgets/like_info.dart';
+import 'package:banking_app/core/constants/app_colors.dart';
+import 'package:banking_app/core/constants/app_text_style.dart';
+import 'package:banking_app/features/food/presentation/cubit/food_main/food_main_cubit.dart';
+import 'package:banking_app/features/food/presentation/widgets/follow_info.dart';
+import 'package:banking_app/features/food/presentation/widgets/like_info.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

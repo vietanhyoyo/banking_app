@@ -1,5 +1,5 @@
-import 'package:clean_architecture/core/constants/app_colors.dart';
-import 'package:clean_architecture/features/food/domain/entities/category.dart';
+import 'package:banking_app/core/constants/app_colors.dart';
+import 'package:banking_app/features/food/domain/entities/category.dart';
 import 'package:flutter/material.dart';
 
 class FoodCard extends StatelessWidget {

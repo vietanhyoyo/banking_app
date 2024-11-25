@@ -1,4 +1,4 @@
-import 'package:clean_architecture/features/favorite_images/domain/entities/image.dart';
+import 'package:banking_app/features/favorite_images/domain/entities/image.dart';
 
 class ImageModel extends ImageEntity {
   const ImageModel({super.id, super.name, super.image, super.like});

@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:clean_architecture/features/shopping/domain/entities/cart_item.dart';
-import 'package:clean_architecture/features/shopping/domain/usecases/post_make_order_usecase.dart';
+import 'package:banking_app/features/shopping/domain/entities/cart_item.dart';
+import 'package:banking_app/features/shopping/domain/usecases/post_make_order_usecase.dart';
 import 'package:equatable/equatable.dart';
 
 part 'cart_state.dart';

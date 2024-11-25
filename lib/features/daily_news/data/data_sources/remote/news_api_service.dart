@@ -1,5 +1,5 @@
-import 'package:clean_architecture/core/constants/constants.dart';
-import 'package:clean_architecture/features/daily_news/data/models/article.dart';
+import 'package:banking_app/core/constants/constants.dart';
+import 'package:banking_app/features/daily_news/data/models/article.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 

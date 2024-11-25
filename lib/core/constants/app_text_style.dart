@@ -1,6 +1,6 @@
-import 'package:clean_architecture/core/constants/app_colors.dart';
-import 'package:clean_architecture/core/constants/app_dimens.dart';
-import 'package:clean_architecture/core/constants/app_fonts.dart';
+import 'package:banking_app/core/constants/app_colors.dart';
+import 'package:banking_app/core/constants/app_dimens.dart';
+import 'package:banking_app/core/constants/app_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

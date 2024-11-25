@@ -1,4 +1,4 @@
-import 'package:clean_architecture/features/shopping/domain/entities/slider.dart';
+import 'package:banking_app/features/shopping/domain/entities/slider.dart';
 
 class SliderModel extends SliderEntity {
   const SliderModel(

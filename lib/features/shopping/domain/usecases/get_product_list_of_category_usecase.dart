@@ -1,7 +1,7 @@
-import 'package:clean_architecture/core/resources/data_state.dart';
-import 'package:clean_architecture/core/usecase/usecase.dart';
-import 'package:clean_architecture/features/shopping/domain/entities/product.dart';
-import 'package:clean_architecture/features/shopping/domain/repository/category_repository.dart';
+import 'package:banking_app/core/resources/data_state.dart';
+import 'package:banking_app/core/usecase/usecase.dart';
+import 'package:banking_app/features/shopping/domain/entities/product.dart';
+import 'package:banking_app/features/shopping/domain/repository/category_repository.dart';
 
 class GetProductListOfCategoryUseCase
     implements UseCase<DataState<List<ProductEntity>>, String> {

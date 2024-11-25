@@ -1,4 +1,4 @@
-import 'package:clean_architecture/features/shopping/domain/entities/category.dart';
+import 'package:banking_app/features/shopping/domain/entities/category.dart';
 
 class CategoryModel extends CategoryEntity {
   const CategoryModel(

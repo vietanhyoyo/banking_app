@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:clean_architecture/features/shopping/domain/entities/bill.dart';
-import 'package:clean_architecture/features/shopping/domain/usecases/get_history_list_usacase.dart';
+import 'package:banking_app/features/shopping/domain/entities/bill.dart';
+import 'package:banking_app/features/shopping/domain/usecases/get_history_list_usacase.dart';
 import 'package:equatable/equatable.dart';
 
 part 'history_state.dart';

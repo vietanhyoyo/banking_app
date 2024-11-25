@@ -1,9 +1,9 @@
-import 'package:clean_architecture/core/utils/widgets/nodata_widget.dart';
-import 'package:clean_architecture/features/food/presentation/cubit/bottom_bar/botton_bar_cubit.dart';
-import 'package:clean_architecture/features/food/presentation/cubit/food_main/food_main_cubit.dart';
-import 'package:clean_architecture/features/food/presentation/pages/food_favorite_page.dart';
-import 'package:clean_architecture/features/food/presentation/pages/food_home_page.dart';
-import 'package:clean_architecture/features/food/presentation/pages/food_viewed_page.dart';
+import 'package:banking_app/core/utils/widgets/nodata_widget.dart';
+import 'package:banking_app/features/food/presentation/cubit/bottom_bar/botton_bar_cubit.dart';
+import 'package:banking_app/features/food/presentation/cubit/food_main/food_main_cubit.dart';
+import 'package:banking_app/features/food/presentation/pages/food_favorite_page.dart';
+import 'package:banking_app/features/food/presentation/pages/food_home_page.dart';
+import 'package:banking_app/features/food/presentation/pages/food_viewed_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

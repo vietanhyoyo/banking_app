@@ -1,4 +1,4 @@
-import 'package:clean_architecture/features/shopping/domain/entities/order.dart';
+import 'package:banking_app/features/shopping/domain/entities/order.dart';
 // OrderItemModel class that extends OrderItemEntity
 
 class OrderItemModel extends OrderItemEntity {

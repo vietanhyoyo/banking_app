@@ -1,5 +1,5 @@
-import 'package:clean_architecture/features/daily_news/data/models/source.dart';
-import 'package:clean_architecture/features/daily_news/domain/entities/article.dart';
+import 'package:banking_app/features/daily_news/data/models/source.dart';
+import 'package:banking_app/features/daily_news/domain/entities/article.dart';
 
 class ArticleModel extends ArticleEntity {
   const ArticleModel(

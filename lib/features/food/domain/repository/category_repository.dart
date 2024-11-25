@@ -1,5 +1,5 @@
-import 'package:clean_architecture/features/food/domain/entities/category.dart';
-import 'package:clean_architecture/features/food/domain/entities/product.dart';
+import 'package:banking_app/features/food/domain/entities/category.dart';
+import 'package:banking_app/features/food/domain/entities/product.dart';
 
 abstract class CategoryRepository {
   Future<List<CategoryEntity>> getCategoryList();

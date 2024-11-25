@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
-import 'package:clean_architecture/features/food/data/models/product.dart';
-import 'package:clean_architecture/features/food/domain/entities/category.dart';
-import 'package:clean_architecture/features/food/domain/entities/product.dart';
-import 'package:clean_architecture/features/food/domain/usecases/get_category_list.dart';
-import 'package:clean_architecture/features/food/domain/usecases/get_product_list.dart';
+import 'package:banking_app/features/food/data/models/product.dart';
+import 'package:banking_app/features/food/domain/entities/category.dart';
+import 'package:banking_app/features/food/domain/entities/product.dart';
+import 'package:banking_app/features/food/domain/usecases/get_category_list.dart';
+import 'package:banking_app/features/food/domain/usecases/get_product_list.dart';
 import 'package:equatable/equatable.dart';
 
 part 'food_main_state.dart';

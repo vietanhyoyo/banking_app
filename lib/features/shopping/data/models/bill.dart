@@ -1,6 +1,6 @@
 // BillModel class that extends BillEntity
-import 'package:clean_architecture/features/shopping/data/models/order_item.dart';
-import 'package:clean_architecture/features/shopping/domain/entities/bill.dart';
+import 'package:banking_app/features/shopping/data/models/order_item.dart';
+import 'package:banking_app/features/shopping/domain/entities/bill.dart';
 
 class BillModel extends BillEntity {
   const BillModel({

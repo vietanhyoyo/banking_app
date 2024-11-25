@@ -1,6 +1,6 @@
-import 'package:clean_architecture/config/routes/routes.dart';
-import 'package:clean_architecture/core/constants/app_colors.dart';
-import 'package:clean_architecture/core/utils/widgets/theme_switcher_button.dart';
+import 'package:banking_app/config/routes/routes.dart';
+import 'package:banking_app/core/constants/app_colors.dart';
+import 'package:banking_app/core/utils/widgets/theme_switcher_button.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {

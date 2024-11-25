@@ -1,7 +1,7 @@
-import 'package:clean_architecture/config/routes/application.dart';
-import 'package:clean_architecture/config/routes/routes.dart';
-import 'package:clean_architecture/features/food/presentation/cubit/food_main/food_main_cubit.dart';
-import 'package:clean_architecture/features/food/presentation/widgets/food_detail_card.dart';
+import 'package:banking_app/config/routes/application.dart';
+import 'package:banking_app/config/routes/routes.dart';
+import 'package:banking_app/features/food/presentation/cubit/food_main/food_main_cubit.dart';
+import 'package:banking_app/features/food/presentation/widgets/food_detail_card.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

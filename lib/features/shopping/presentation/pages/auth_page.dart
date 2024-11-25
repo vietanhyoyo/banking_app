@@ -1,13 +1,13 @@
 // ignore_for_file: use_build_context_synchronously
 
-import 'package:clean_architecture/config/routes/application.dart';
-import 'package:clean_architecture/config/routes/routes.dart';
-import 'package:clean_architecture/core/constants/app_colors.dart';
-import 'package:clean_architecture/core/constants/app_text_style.dart';
-import 'package:clean_architecture/core/utils/widgets/reusable_input.dart';
-import 'package:clean_architecture/features/shopping/data/data_sources/local/storage.dart';
-import 'package:clean_architecture/features/shopping/domain/usecases/post_login_usecase.dart';
-import 'package:clean_architecture/injection_container.dart';
+import 'package:banking_app/config/routes/application.dart';
+import 'package:banking_app/config/routes/routes.dart';
+import 'package:banking_app/core/constants/app_colors.dart';
+import 'package:banking_app/core/constants/app_text_style.dart';
+import 'package:banking_app/core/utils/widgets/reusable_input.dart';
+import 'package:banking_app/features/shopping/data/data_sources/local/storage.dart';
+import 'package:banking_app/features/shopping/domain/usecases/post_login_usecase.dart';
+import 'package:banking_app/injection_container.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';

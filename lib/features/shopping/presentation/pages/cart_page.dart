@@ -1,9 +1,9 @@
-import 'package:clean_architecture/core/utils/helper.dart';
-import 'package:clean_architecture/core/utils/widgets/nodata_widget.dart';
-import 'package:clean_architecture/features/shopping/domain/entities/cart_item.dart';
-import 'package:clean_architecture/features/shopping/presentation/cubit/cart/cart_cubit.dart';
-import 'package:clean_architecture/features/shopping/presentation/widgets/alert_loading.dart';
-import 'package:clean_architecture/features/shopping/presentation/widgets/alert_success.dart';
+import 'package:banking_app/core/utils/helper.dart';
+import 'package:banking_app/core/utils/widgets/nodata_widget.dart';
+import 'package:banking_app/features/shopping/domain/entities/cart_item.dart';
+import 'package:banking_app/features/shopping/presentation/cubit/cart/cart_cubit.dart';
+import 'package:banking_app/features/shopping/presentation/widgets/alert_loading.dart';
+import 'package:banking_app/features/shopping/presentation/widgets/alert_success.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

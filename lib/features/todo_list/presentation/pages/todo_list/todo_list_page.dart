@@ -1,6 +1,6 @@
-import 'package:clean_architecture/core/utils/widgets/reusable_input.dart';
-import 'package:clean_architecture/core/constants/app_colors.dart';
-import 'package:clean_architecture/features/todo_list/presentation/cubit/todo_list/todo_list_cubit.dart';
+import 'package:banking_app/core/utils/widgets/reusable_input.dart';
+import 'package:banking_app/core/constants/app_colors.dart';
+import 'package:banking_app/features/todo_list/presentation/cubit/todo_list/todo_list_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

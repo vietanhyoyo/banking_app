@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:clean_architecture/features/favorite_images/data/models/image.dart';
-import 'package:clean_architecture/features/favorite_images/domain/entities/image.dart';
-import 'package:clean_architecture/features/favorite_images/domain/usecases/get_image_list.dart';
+import 'package:banking_app/features/favorite_images/data/models/image.dart';
+import 'package:banking_app/features/favorite_images/domain/entities/image.dart';
+import 'package:banking_app/features/favorite_images/domain/usecases/get_image_list.dart';
 import 'package:equatable/equatable.dart';
 
 part 'favorite_image_state.dart';

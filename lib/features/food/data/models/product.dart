@@ -1,4 +1,4 @@
-import 'package:clean_architecture/features/food/domain/entities/product.dart';
+import 'package:banking_app/features/food/domain/entities/product.dart';
 
 class ProductModel extends ProductEntity {
   const ProductModel({

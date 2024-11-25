@@ -1,4 +1,4 @@
-import 'package:clean_architecture/features/shopping/data/data_sources/local/storage.dart';
+import 'package:banking_app/features/shopping/data/data_sources/local/storage.dart';
 import 'package:dio/dio.dart';
 
 Dio createDio() {

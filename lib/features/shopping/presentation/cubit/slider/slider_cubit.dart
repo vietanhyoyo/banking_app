@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:clean_architecture/features/shopping/domain/entities/slider.dart';
-import 'package:clean_architecture/features/shopping/domain/usecases/get_sliders_usecase.dart';
+import 'package:banking_app/features/shopping/domain/entities/slider.dart';
+import 'package:banking_app/features/shopping/domain/usecases/get_sliders_usecase.dart';
 import 'package:equatable/equatable.dart';
 
 part 'slider_state.dart';

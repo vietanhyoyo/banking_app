@@ -1,7 +1,7 @@
-import 'package:clean_architecture/config/routes/application.dart';
-import 'package:clean_architecture/config/routes/routes.dart';
-import 'package:clean_architecture/features/food/domain/entities/category.dart';
-import 'package:clean_architecture/features/food/presentation/widgets/food_card.dart';
+import 'package:banking_app/config/routes/application.dart';
+import 'package:banking_app/config/routes/routes.dart';
+import 'package:banking_app/features/food/domain/entities/category.dart';
+import 'package:banking_app/features/food/presentation/widgets/food_card.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 

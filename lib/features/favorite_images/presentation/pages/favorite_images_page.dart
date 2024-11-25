@@ -1,6 +1,6 @@
-import 'package:clean_architecture/core/constants/app_colors.dart';
-import 'package:clean_architecture/features/favorite_images/presentation/cubit/favorite_image/favorite_image_cubit.dart';
-import 'package:clean_architecture/features/favorite_images/presentation/widgets/swipe_body.dart';
+import 'package:banking_app/core/constants/app_colors.dart';
+import 'package:banking_app/features/favorite_images/presentation/cubit/favorite_image/favorite_image_cubit.dart';
+import 'package:banking_app/features/favorite_images/presentation/widgets/swipe_body.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

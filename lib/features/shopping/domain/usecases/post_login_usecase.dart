@@ -1,7 +1,7 @@
-import 'package:clean_architecture/core/resources/data_state.dart';
-import 'package:clean_architecture/core/usecase/usecase.dart';
-import 'package:clean_architecture/features/shopping/domain/entities/auth.dart';
-import 'package:clean_architecture/features/shopping/domain/repository/auth_repository.dart';
+import 'package:banking_app/core/resources/data_state.dart';
+import 'package:banking_app/core/usecase/usecase.dart';
+import 'package:banking_app/features/shopping/domain/entities/auth.dart';
+import 'package:banking_app/features/shopping/domain/repository/auth_repository.dart';
 
 class PostLoginUseCase
     implements UseCase<DataState<AuthEntity>, Map<String, String>> {

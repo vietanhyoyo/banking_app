@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:clean_architecture/features/food/data/models/product.dart';
+import 'package:banking_app/features/food/data/models/product.dart';
 import 'package:flutter/services.dart';
 
 class ProductService {

@@ -1,4 +1,4 @@
-import 'package:clean_architecture/features/shopping/domain/entities/auth.dart';
+import 'package:banking_app/features/shopping/domain/entities/auth.dart';
 
 class AuthModel extends AuthEntity {
   const AuthModel(

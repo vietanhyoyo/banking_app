@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:clean_architecture/core/resources/data_state.dart';
-import 'package:clean_architecture/features/shopping/data/data_sources/remote/shopping_api_service.dart';
-import 'package:clean_architecture/features/shopping/domain/entities/category.dart';
-import 'package:clean_architecture/features/shopping/domain/entities/product.dart';
-import 'package:clean_architecture/features/shopping/domain/repository/category_repository.dart';
+import 'package:banking_app/core/resources/data_state.dart';
+import 'package:banking_app/features/shopping/data/data_sources/remote/shopping_api_service.dart';
+import 'package:banking_app/features/shopping/domain/entities/category.dart';
+import 'package:banking_app/features/shopping/domain/entities/product.dart';
+import 'package:banking_app/features/shopping/domain/repository/category_repository.dart';
 import 'package:dio/dio.dart';
 
 class CategoryRepositoryImpl implements CategoryRepository {
