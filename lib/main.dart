@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
                 title: 'Flutter Demo',
                 debugShowCheckedModeBanner: false,
                 theme: AppTheme.currentTheme.lightTheme,
-                darkTheme: AppTheme.currentTheme.darkTheme,
+                darkTheme: AppTheme.currentTheme.lightTheme,
                 themeMode: currentMode,
                 onGenerateRoute: Application.router?.generator,
                 initialRoute: Routes.login,

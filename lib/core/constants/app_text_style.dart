@@ -5,14 +5,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppText {
-  static TextStyle titlePrimaryLG =
-      TextStyle(fontSize: AppDimens.d24.sp, fontWeight: FontWeight.w700, color: AppColors.primary);
+  ///Title
+  static TextStyle titlePrimaryLG = TextStyle(
+      fontSize: AppDimens.d24.sp,
+      fontWeight: FontWeight.w700,
+      color: AppColors.primary);
   static TextStyle titleLG =
       TextStyle(fontSize: AppDimens.d24.sp, fontWeight: FontWeight.w700);
   static TextStyle titleMD =
-      TextStyle(fontSize: AppDimens.d20.sp, fontWeight: FontWeight.w400);
+      TextStyle(fontSize: AppDimens.d16.sp, fontWeight: FontWeight.w600);
   static TextStyle titleSM =
       TextStyle(fontSize: AppDimens.d16.sp, fontWeight: FontWeight.w400);
+
+  ///Label
+  static TextStyle labelLG =
+      TextStyle(fontSize: AppDimens.d14.sp, fontWeight: FontWeight.w600);
+
+  ///Body
+  static TextStyle bodyMD =
+      TextStyle(fontSize: AppDimens.d14.sp, fontWeight: FontWeight.w300);
   static TextStyle bodySM =
       TextStyle(fontSize: AppDimens.d12.sp, fontWeight: FontWeight.w300);
 }

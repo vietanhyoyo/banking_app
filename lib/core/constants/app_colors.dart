@@ -48,4 +48,7 @@ class AppColors {
   static const Color white1 = Color.fromARGB(255, 247, 247, 247);
   static const Color white = Color(0xFFFFFFFF);
   static const Color red = Color.fromARGB(255, 214, 42, 42);
+
+  ///Material
+  static const Color whiteOpa90 = Color.fromARGB(230, 255, 255, 255);
 }

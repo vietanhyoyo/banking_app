@@ -76,6 +76,9 @@ dependencies:
 
   #local storage
   shared_preferences: ^2.2.3
+  
+  #svg 
+  flutter_svg: ^2.0.10
 
   #application icon change
   flutter_launcher_icons: ^0.13.1
@@ -117,7 +120,9 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/svgs/
     - assets/images/category/
+    - assets/images/background/
     - assets/images/meal/
     - assets/jsons/
 

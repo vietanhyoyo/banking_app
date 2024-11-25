@@ -1,5 +1,6 @@
 import 'package:banking_app/config/theme/custom_theme.dart';
 import 'package:banking_app/core/constants/app_colors.dart';
+import 'package:banking_app/core/constants/app_dimens.dart';
 import 'package:banking_app/core/constants/app_text_style.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +29,30 @@ final CustomTheme theme = CustomTheme(
           fontSize: 20.0,
         ),
       ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.primary, // Màu nền của button
+          foregroundColor: AppColors.white, // Màu chữ/icon
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8), // Góc bo tròn
+          ),
+          textStyle: AppText.titleMD,
+          elevation: 0, // Độ cao (shadow)
+          minimumSize: const Size.fromHeight(48),
+        ),
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8), // Góc bo tròn
+          ),
+          textStyle: AppText.titleMD,
+          elevation: 0, // Độ cao (shadow)
+          minimumSize: const Size.fromHeight(48),
+        ),
+      ),
     ),
     darkTheme: ThemeData.dark().copyWith(
       colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
@@ -51,6 +76,19 @@ final CustomTheme theme = CustomTheme(
           color: AppColors.primary,
           fontWeight: FontWeight.bold,
           fontSize: 20.0,
+        ),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.primary, // Màu nền của button
+          foregroundColor: AppColors.white, // Màu chữ/icon
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8), // Góc bo tròn
+          ),
+          textStyle: AppText.titleMD,
+          elevation: 0, // Độ cao (shadow)
+          minimumSize: const Size.fromHeight(48),
         ),
       ),
     ));

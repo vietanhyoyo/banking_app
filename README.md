@@ -16,7 +16,6 @@ Ensure that the Flutter SDK path is added to your system environment variables.
 ## Getting Started
 
 1. **Clone the repository:**
-
     ```bash
     git clone https://github.com/yourusername/your-flutter-project.git
     cd your-flutter-project

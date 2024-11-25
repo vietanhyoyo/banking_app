@@ -7,6 +7,7 @@ class AppDimens {
   static const double d8 = 8.0;
   static const double d10 = 10.0;
   static const double d12 = 12.0;
+  static const double d14 = 14.0;
   static const double d16 = 16.0;
   static const double d20 = 20.0;
   static const double d22 = 22.0;
@@ -36,6 +37,12 @@ class ResSpace {
   static h8() {
     return SizedBox(
       height: AppDimens.d8.sp,
+    );
+  }
+
+  static h14() {
+    return SizedBox(
+      height: AppDimens.d14.sp,
     );
   }
 
