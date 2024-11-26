@@ -83,7 +83,7 @@ class LoginPage extends StatelessWidget {
                           "Password",
                           style: AppText.labelLG,
                         ),
-                        const CusInput(),
+                        const CusInput(isPassword: true,),
                       ],
                     ),
                     ResSpace.h14(),

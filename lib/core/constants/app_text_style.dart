@@ -18,14 +18,23 @@ class AppText {
       TextStyle(fontSize: AppDimens.d16.sp, fontWeight: FontWeight.w400);
 
   ///Label
-  static TextStyle labelLG =
-      TextStyle(fontSize: AppDimens.d14.sp, fontWeight: FontWeight.w600);
+  static TextStyle labelLG = TextStyle(
+    fontSize: AppDimens.d14.sp,
+    fontWeight: FontWeight.w600,
+    height: 20 / AppDimens.d14,
+  );
 
   ///Body
-  static TextStyle bodyMD =
-      TextStyle(fontSize: AppDimens.d14.sp, fontWeight: FontWeight.w300);
-  static TextStyle bodySM =
-      TextStyle(fontSize: AppDimens.d12.sp, fontWeight: FontWeight.w300);
+  static TextStyle bodyMD = TextStyle(
+    fontSize: AppDimens.d14.sp,
+    fontWeight: FontWeight.w300,
+    height: 24 / AppDimens.d16,
+  );
+  static TextStyle bodySM = TextStyle(
+    fontSize: AppDimens.d12.sp,
+    fontWeight: FontWeight.w300,
+    height: 20 / AppDimens.d14,
+  );
 }
 
 TextTheme textTheme = TextTheme(
