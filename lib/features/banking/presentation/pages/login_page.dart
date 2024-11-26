@@ -3,6 +3,7 @@ import 'package:banking_app/core/constants/app_dimens.dart';
 import 'package:banking_app/core/constants/app_text_style.dart';
 import 'package:banking_app/features/banking/presentation/widgets/cus_input.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_carousel_slider/carousel_slider.dart';
 import 'dart:ui';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,13 +26,40 @@ class LoginPage extends StatelessWidget {
   }
 
   Widget _buildBody(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      child: Image.asset(
-        "assets/images/background/poster_app.png",
-        fit: BoxFit.cover,
+    return CarouselSlider(
+      slideTransform: const CubeTransform(),
+      slideIndicator: CircularSlideIndicator(
+        alignment: Alignment.topCenter,
+        padding: EdgeInsets.only(top: 70),
+        currentIndicatorColor: Colors.white,
       ),
+      unlimitedMode: true,
+      children: [
+        SizedBox(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: Image.asset(
+            "assets/images/background/poster_app.png",
+            fit: BoxFit.cover,
+          ),
+        ),
+        SizedBox(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: Image.asset(
+            "assets/images/background/poster_app.png",
+            fit: BoxFit.cover,
+          ),
+        ),
+        SizedBox(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: Image.asset(
+            "assets/images/background/poster_app.png",
+            fit: BoxFit.cover,
+          ),
+        ),
+      ],
     );
   }
 
@@ -60,7 +88,7 @@ class LoginPage extends StatelessWidget {
                   top: AppDimens.d40,
                   right: AppDimens.d24,
                   left: AppDimens.d24,
-                  bottom: AppDimens.d40,
+                  bottom: AppDimens.d34,
                 ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -83,7 +111,9 @@ class LoginPage extends StatelessWidget {
                           "Password",
                           style: AppText.labelLG,
                         ),
-                        const CusInput(isPassword: true,),
+                        const CusInput(
+                          isPassword: true,
+                        ),
                       ],
                     ),
                     ResSpace.h14(),

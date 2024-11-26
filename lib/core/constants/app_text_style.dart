@@ -27,12 +27,12 @@ class AppText {
   ///Body
   static TextStyle bodyMD = TextStyle(
     fontSize: AppDimens.d14.sp,
-    fontWeight: FontWeight.w300,
+    fontWeight: FontWeight.w400,
     height: 24 / AppDimens.d16,
   );
   static TextStyle bodySM = TextStyle(
     fontSize: AppDimens.d12.sp,
-    fontWeight: FontWeight.w300,
+    fontWeight: FontWeight.w400,
     height: 20 / AppDimens.d14,
   );
 }

@@ -83,6 +83,9 @@ dependencies:
   #application icon change
   flutter_launcher_icons: ^0.13.1
 
+  #slider 3d
+  flutter_carousel_slider: ^1.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
