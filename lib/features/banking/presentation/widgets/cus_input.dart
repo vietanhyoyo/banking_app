@@ -5,8 +5,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CusInput extends StatefulWidget {
   final String? hintText;
   final bool isPassword;
+  final ValueChanged<String> onChanged;
 
-  const CusInput({super.key, this.hintText, this.isPassword = false});
+  const CusInput({super.key, this.hintText, this.isPassword = false, required this.onChanged});
 
   @override
   _CusInputState createState() => _CusInputState();
@@ -31,6 +32,7 @@ class _CusInputState extends State<CusInput> {
       ),
       child: TextField(
         style: AppText.bodyMD,
+        onChanged: widget.onChanged,
         obscureText:
             widget.isPassword ? _isObscured : false, 
         decoration: InputDecoration(

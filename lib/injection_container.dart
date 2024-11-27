@@ -1,3 +1,4 @@
+import 'package:banking_app/features/banking/presentation/bloc/login/login_bloc.dart';
 import 'package:banking_app/features/daily_news/data/data_sources/remote/news_api_service.dart';
 import 'package:banking_app/features/daily_news/data/repository/article_repository_impl.dart';
 import 'package:banking_app/features/daily_news/domain/repository/article_repository.dart';
@@ -102,6 +103,7 @@ Future<void> initializeDependencies() async {
 
   // Blocs
   sl.registerFactory<RemoteArticleBloc>(() => RemoteArticleBloc(sl()));
+  sl.registerFactory<LoginBloc>(() => LoginBloc());
 
   // Cubits
   sl.registerFactory<FavoriteImageCubit>(() => FavoriteImageCubit(sl()));
