@@ -27,10 +27,9 @@ class FoodHomePage extends StatelessWidget {
           return InkWell(
               child: FoodCard(foodItem: foodItem),
               onTap: () {
-                Application.navigateTo(
-                    context,
+                Application.navigateTo(context,
                     "${Routes.categoryFood}/${foodItem.id}/${foodItem.name}",
-                    TransitionType.inFromRight);
+                    transition: TransitionType.inFromRight);
               });
         },
       ),

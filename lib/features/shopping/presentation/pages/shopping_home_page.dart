@@ -57,7 +57,7 @@ class ShoppingHomePage extends StatelessWidget {
               Application.navigateTo(
                 context,
                 Routes.history,
-                TransitionType.inFromRight,
+                transition: TransitionType.inFromRight,
               );
             },
           ),
@@ -96,7 +96,7 @@ class ShoppingHomePage extends StatelessWidget {
                     Application.navigateTo(
                       context,
                       Routes.cart,
-                      TransitionType.inFromRight,
+                      transition: TransitionType.inFromRight,
                     );
                   },
                 ),
@@ -110,7 +110,7 @@ class ShoppingHomePage extends StatelessWidget {
               Application.navigateTo(
                 context,
                 Routes.cart,
-                TransitionType.inFromRight,
+                transition: TransitionType.inFromRight,
               );
             },
           );
@@ -158,10 +158,9 @@ class ShoppingHomePage extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: GestureDetector(
                             onTap: () {
-                              Application.navigateTo(
-                                  context,
+                              Application.navigateTo(context,
                                   "${Routes.productList}/${state.categoryList[index].id}/${state.categoryList[index].name}",
-                                  TransitionType.inFromRight);
+                                  transition: TransitionType.inFromRight);
                             },
                             child: Column(
                               children: [

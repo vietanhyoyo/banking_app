@@ -11,7 +11,7 @@ class AppText {
       fontWeight: FontWeight.w700,
       color: AppColors.primary);
   static TextStyle titleLG =
-      TextStyle(fontSize: AppDimens.d24.sp, fontWeight: FontWeight.w700);
+      TextStyle(fontSize: AppDimens.d22.sp, fontWeight: FontWeight.w400, height: 28 / AppDimens.d22,);
   static TextStyle titleMD =
       TextStyle(fontSize: AppDimens.d16.sp, fontWeight: FontWeight.w600);
   static TextStyle titleSM =
@@ -23,12 +23,17 @@ class AppText {
     fontWeight: FontWeight.w600,
     height: 20 / AppDimens.d14,
   );
+  static TextStyle labelPrimaryLG = TextStyle(
+      fontSize: AppDimens.d14.sp,
+      fontWeight: FontWeight.w600,
+      height: 20 / AppDimens.d14,
+      color: AppColors.primary);
 
   ///Body
   static TextStyle bodyMD = TextStyle(
     fontSize: AppDimens.d14.sp,
     fontWeight: FontWeight.w400,
-    height: 24 / AppDimens.d16,
+    height: 24 / AppDimens.d14,
   );
   static TextStyle bodySM = TextStyle(
     fontSize: AppDimens.d12.sp,

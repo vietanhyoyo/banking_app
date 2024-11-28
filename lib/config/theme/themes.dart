@@ -9,8 +9,8 @@ final CustomTheme theme = CustomTheme(
       colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
       scaffoldBackgroundColor: AppColors.white1,
       appBarTheme: AppBarTheme(
-        backgroundColor: AppColors.primary,
-        foregroundColor: AppColors.white,
+        backgroundColor: AppColors.white,
+        foregroundColor: AppColors.black,
         titleTextStyle: AppText.titleLG,
       ),
       primaryColor: AppColors.primary,

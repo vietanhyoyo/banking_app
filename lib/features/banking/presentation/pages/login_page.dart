@@ -1,5 +1,8 @@
+import 'package:banking_app/config/routes/application.dart';
+import 'package:banking_app/config/routes/routes.dart';
 import 'package:banking_app/core/constants/app_colors.dart';
 import 'package:banking_app/core/constants/app_dimens.dart';
+import 'package:banking_app/core/constants/app_shadow.dart';
 import 'package:banking_app/core/constants/app_text_style.dart';
 import 'package:banking_app/features/banking/presentation/bloc/login/login_bloc.dart';
 import 'package:banking_app/features/banking/presentation/widgets/cus_input.dart';
@@ -65,105 +68,116 @@ class _LoginPageState extends State<LoginPage> {
   Widget _buildBottomSheet(BuildContext context) {
     return Align(
       alignment: Alignment.bottomCenter,
-      child: ClipRRect(
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(24),
-          topRight: Radius.circular(24),
-        ),
-        child: IntrinsicHeight(
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: AppColors.whiteOpa90,
+      child: Container(
+        decoration: BoxDecoration(boxShadow: [AppShadow.cardShadow]),
+        child: ClipRRect(
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(24),
+            topRight: Radius.circular(24),
+          ),
+          child: IntrinsicHeight(
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      color: AppColors.whiteOpa90,
+                    ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  top: AppDimens.d40,
-                  right: AppDimens.d24,
-                  left: AppDimens.d24,
-                  bottom: AppDimens.d34,
-                ),
-                child: BlocBuilder<LoginBloc, LoginState>(
-                  builder: (context, state) {
-                    return Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: AppDimens.d40,
+                    right: AppDimens.d24,
+                    left: AppDimens.d24,
+                    bottom: AppDimens.d34,
+                  ),
+                  child: BlocBuilder<LoginBloc, LoginState>(
+                    builder: (context, state) {
+                      if (state.isSubmitting) {
+                        WidgetsBinding.instance.addPostFrameCallback((_) {
+                          Application.navigateTo(context, Routes.bankingHome,
+                              replace: true);
+                        });
+                        return const SizedBox();
+                      } else {
+                        return Column(
+                          mainAxisSize: MainAxisSize.min,
                           children: [
-                            Text(
-                              "Account",
-                              style: AppText.labelLG,
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Account",
+                                  style: AppText.labelLG,
+                                ),
+                                CusInput(
+                                  onChanged: (value) {
+                                    context
+                                        .read<LoginBloc>()
+                                        .add(LoginAccountChanged(value));
+                                  },
+                                ),
+                              ],
                             ),
-                            CusInput(
-                              onChanged: (value) {
-                                context
-                                    .read<LoginBloc>()
-                                    .add(LoginAccountChanged(value));
+                            ResSpace.h14(),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Password",
+                                  style: AppText.labelLG,
+                                ),
+                                CusInput(
+                                  onChanged: (value) {
+                                    context
+                                        .read<LoginBloc>()
+                                        .add(LoginPasswordChanged(value));
+                                  },
+                                  isPassword: true,
+                                ),
+                              ],
+                            ),
+                            ResSpace.h14(),
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                minimumSize: const Size(double.infinity, 48),
+                              ),
+                              onPressed: () {
+                                context.read<LoginBloc>().add(LoginSubmitted());
                               },
+                              child: const Text("LOGIN"),
                             ),
-                          ],
-                        ),
-                        ResSpace.h14(),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Password",
-                              style: AppText.labelLG,
+                            ResSpace.h14(),
+                            SvgPicture.asset(
+                              "assets/svgs/biometric_icon.svg",
+                              semanticsLabel: 'Acme Logo',
+                              width: 60.sp,
+                              height: 60.sp,
                             ),
-                            CusInput(
-                              onChanged: (value) {
-                                context
-                                    .read<LoginBloc>()
-                                    .add(LoginPasswordChanged(value));
+                            ResSpace.h14(),
+                            Container(
+                              width: 140.sp,
+                              height: 2.sp,
+                              color: AppColors.fourth,
+                            ),
+                            ResSpace.h14(),
+                            TextButton(
+                              onPressed: () {
+                                print("Login button pressed");
                               },
-                              isPassword: true,
-                            ),
+                              child: const Text("Register"),
+                            )
                           ],
-                        ),
-                        ResSpace.h14(),
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            minimumSize: const Size(double.infinity, 48),
-                          ),
-                          onPressed: () {
-                            context.read<LoginBloc>().add(LoginSubmitted());
-                          },
-                          child: const Text("LOGIN"),
-                        ),
-                        ResSpace.h14(),
-                        SvgPicture.asset(
-                          "assets/svgs/biometric_icon.svg",
-                          semanticsLabel: 'Acme Logo',
-                          width: 60.sp,
-                          height: 60.sp,
-                        ),
-                        ResSpace.h14(),
-                        Container(
-                          width: 140.sp,
-                          height: 2.sp,
-                          color: AppColors.fourth,
-                        ),
-                        ResSpace.h14(),
-                        TextButton(
-                          onPressed: () {
-                            print("Login button pressed");
-                          },
-                          child: const Text("Register"),
-                        )
-                      ],
-                    );
-                  },
+                        );
+                      }
+                    },
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

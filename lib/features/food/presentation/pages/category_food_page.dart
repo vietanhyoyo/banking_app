@@ -45,10 +45,9 @@ class CategoryFoodPage extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: GestureDetector(
                     onTap: () {
-                      Application.navigateTo(
-                          context,
+                      Application.navigateTo(context,
                           "${Routes.detailFood}/${productList[index].id}/${productList[index].title}",
-                          TransitionType.inFromRight);
+                          transition: TransitionType.inFromRight);
                     },
                     child: FoodDetailCard(
                         foodItem: productList[index],
