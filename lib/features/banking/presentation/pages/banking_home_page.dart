@@ -5,12 +5,11 @@ import 'package:banking_app/core/constants/app_dimens.dart';
 import 'package:banking_app/core/constants/app_text_style.dart';
 import 'package:banking_app/features/banking/presentation/widgets/blur_card.dart';
 import 'package:banking_app/features/banking/presentation/widgets/cus_appbar.dart';
+import 'package:banking_app/features/banking/presentation/widgets/cus_bottom_navigation_bar.dart';
 import 'package:banking_app/features/banking/presentation/widgets/cus_card.dart';
 import 'package:banking_app/features/banking/presentation/widgets/pay_icon_button.dart';
 import 'package:banking_app/features/banking/presentation/widgets/transaction_button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_carousel_slider/carousel_slider.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -24,6 +23,33 @@ class BankingHomePage extends StatelessWidget {
       appBar: CusAppbar(),
       backgroundColor: AppColors.neutral3,
       body: _buildBody(context),
+      bottomNavigationBar: const CusBottomNavigationBar(),
+      extendBody: true, // Important to remove background bottom navigation bar
+      floatingActionButton: Container(
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: AppColors.primary,
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.primary.withOpacity(0.6),
+              blurRadius: 20.0,
+              spreadRadius: 0,
+              offset: const Offset(0, 10),
+            ),
+          ],
+        ),
+        child: FloatingActionButton(
+          onPressed: () {},
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+          child: const Icon(
+            Icons.qr_code_scanner_rounded,
+            size: 28,
+            color: AppColors.white,
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 
@@ -58,35 +84,33 @@ class BankingHomePage extends StatelessWidget {
       {"icon": "school_icon.svg", "text": "Tuition"},
     ];
 
-    return Stack(
-      children: [
-        Column(
+    return SingleChildScrollView(
+      child: IntrinsicHeight(
+        child: Stack(
           children: [
-            AspectRatio(
-              aspectRatio: 16 / 9,
-              child: CarouselSlider(
-                slideTransform: const CubeTransform(),
-                unlimitedMode: true,
-                children: [
-                  Image.asset(
-                    "assets/images/background/banner_home.png",
-                    fit: BoxFit.cover,
+            Column(
+              children: [
+                AspectRatio(
+                  aspectRatio: 16 / 9,
+                  child: CarouselSlider(
+                    slideTransform: const CubeTransform(),
+                    unlimitedMode: true,
+                    children: [
+                      Image.asset(
+                        "assets/images/background/banner_home.png",
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        "assets/images/background/banner_home.png",
+                        fit: BoxFit.cover,
+                      ),
+                    ],
                   ),
-                  Image.asset(
-                    "assets/images/background/banner_home.png",
-                    fit: BoxFit.cover,
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
-          ],
-        ),
-        Positioned(
-            top: MediaQuery.of(context).size.width / 16 * 9 - 40,
-            left: 0,
-            right: 0,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24.sp),
+            Padding(
+              padding: EdgeInsets.only(right: 24.sp, left: 24.sp, top: 180.sp),
               child: Column(
                 children: [
                   BlurCard(
@@ -194,11 +218,112 @@ class BankingHomePage extends StatelessWidget {
                         ],
                       ),
                     ),
+                  ),
+                  ResSpace.h14(),
+                  CusCard(
+                    child: Padding(
+                      padding: EdgeInsets.all(18.sp),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Pay Bill",
+                            style: AppText.labelLG,
+                          ),
+                          ResSpace.h12(),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: payIcons.map((p) {
+                                return Row(
+                                  children: [
+                                    PayIconButton(
+                                      icon: SvgPicture.asset(
+                                          "assets/svgs/${p['icon']}"),
+                                      text: p['text'] as String,
+                                    ),
+                                    ResSpace.w8(),
+                                  ],
+                                );
+                              }).toList(),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  ResSpace.h14(),
+                  CusCard(
+                    child: Padding(
+                      padding: EdgeInsets.all(18.sp),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Pay Bill",
+                            style: AppText.labelLG,
+                          ),
+                          ResSpace.h12(),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: payIcons.map((p) {
+                                return Row(
+                                  children: [
+                                    PayIconButton(
+                                      icon: SvgPicture.asset(
+                                          "assets/svgs/${p['icon']}"),
+                                      text: p['text'] as String,
+                                    ),
+                                    ResSpace.w8(),
+                                  ],
+                                );
+                              }).toList(),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  ResSpace.h14(),
+                  CusCard(
+                    child: Padding(
+                      padding: EdgeInsets.all(18.sp),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Pay Bill",
+                            style: AppText.labelLG,
+                          ),
+                          ResSpace.h12(),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: payIcons.map((p) {
+                                return Row(
+                                  children: [
+                                    PayIconButton(
+                                      icon: SvgPicture.asset(
+                                          "assets/svgs/${p['icon']}"),
+                                      text: p['text'] as String,
+                                    ),
+                                    ResSpace.w8(),
+                                  ],
+                                );
+                              }).toList(),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
                   )
                 ],
               ),
-            ))
-      ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }
