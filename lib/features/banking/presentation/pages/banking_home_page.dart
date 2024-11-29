@@ -2,11 +2,11 @@ import 'dart:ui';
 
 import 'package:banking_app/core/constants/app_colors.dart';
 import 'package:banking_app/core/constants/app_dimens.dart';
-import 'package:banking_app/core/constants/app_shadow.dart';
 import 'package:banking_app/core/constants/app_text_style.dart';
 import 'package:banking_app/features/banking/presentation/widgets/blur_card.dart';
 import 'package:banking_app/features/banking/presentation/widgets/cus_appbar.dart';
 import 'package:banking_app/features/banking/presentation/widgets/cus_card.dart';
+import 'package:banking_app/features/banking/presentation/widgets/pay_icon_button.dart';
 import 'package:banking_app/features/banking/presentation/widgets/transaction_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +28,36 @@ class BankingHomePage extends StatelessWidget {
   }
 
   Widget _buildBody(BuildContext context) {
+    final transactions = [
+      {
+        "icon": "hand_coin_icon.svg",
+        "label": "Deposit",
+        "color": AppColors.primary
+      },
+      {
+        "icon": "credit_card_icon.svg",
+        "label": "Card",
+        "color": AppColors.secondary
+      },
+      {
+        "icon": "cached_icon.svg",
+        "label": "Transfer",
+        "color": AppColors.thirdly
+      },
+      {
+        "icon": "ticket_icon.svg",
+        "label": "Voucher",
+        "color": AppColors.fourth
+      },
+    ];
+
+    final payIcons = [
+      {"icon": "lightning_bolt_icon.svg", "text": "Electricity"},
+      {"icon": "water_icon.svg", "text": "Water"},
+      {"icon": "wifi_icon.svg", "text": "Internet"},
+      {"icon": "school_icon.svg", "text": "Tuition"},
+    ];
+
     return Stack(
       children: [
         Column(
@@ -89,40 +119,17 @@ class BankingHomePage extends StatelessWidget {
                         ResSpace.h16(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            TransactionButton(
+                          children: transactions.map((t) {
+                            return TransactionButton(
                               icon: SvgPicture.asset(
-                                "assets/svgs/hand_coin_icon.svg",
+                                "assets/svgs/${t['icon']}",
                                 width: 24.sp,
                                 height: 24.sp,
                               ),
-                              label: "Deposit",
-                            ),
-                            TransactionButton(
-                                icon: SvgPicture.asset(
-                                  "assets/svgs/credit_card_icon.svg",
-                                  width: 24.sp,
-                                  height: 24.sp,
-                                ),
-                                label: "Card",
-                                color: AppColors.secondary),
-                            TransactionButton(
-                                icon: SvgPicture.asset(
-                                  "assets/svgs/cached_icon.svg",
-                                  width: 24.sp,
-                                  height: 24.sp,
-                                ),
-                                label: "Transfer",
-                                color: AppColors.thirdly),
-                            TransactionButton(
-                                icon: SvgPicture.asset(
-                                  "assets/svgs/ticket_icon.svg",
-                                  width: 24.sp,
-                                  height: 24.sp,
-                                ),
-                                label: "Voucher",
-                                color: AppColors.fourth),
-                          ],
+                              label: t['label'] as String,
+                              color: t['color'] as Color?,
+                            );
+                          }).toList(),
                         ),
                       ],
                     ),
@@ -140,11 +147,50 @@ class BankingHomePage extends StatelessWidget {
                                 "Visa Card Registration",
                                 style: AppText.labelLG,
                               ),
-                              Image.asset("assets/images/visa.png", height: 11.sp,)
+                              Image.asset(
+                                "assets/images/visa.png",
+                                height: 11.sp,
+                              )
                             ],
                           ),
                           ResSpace.h4(),
-                          Text("Quick procedure, no personal income declaration required", style: AppText.bodySM,)
+                          Text(
+                            "Quick procedure, no personal income declaration required",
+                            style: AppText.bodySM,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  ResSpace.h14(),
+                  CusCard(
+                    child: Padding(
+                      padding: EdgeInsets.all(18.sp),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Pay Bill",
+                            style: AppText.labelLG,
+                          ),
+                          ResSpace.h12(),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: payIcons.map((p) {
+                                return Row(
+                                  children: [
+                                    PayIconButton(
+                                      icon: SvgPicture.asset(
+                                          "assets/svgs/${p['icon']}"),
+                                      text: p['text'] as String,
+                                    ),
+                                    ResSpace.w8(),
+                                  ],
+                                );
+                              }).toList(),
+                            ),
+                          )
                         ],
                       ),
                     ),

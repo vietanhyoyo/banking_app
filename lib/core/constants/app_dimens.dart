@@ -47,6 +47,12 @@ class ResSpace {
     );
   }
 
+  static h12() {
+    return SizedBox(
+      height: AppDimens.d12.sp,
+    );
+  }
+
   static h16() {
     return SizedBox(
       height: AppDimens.d16.sp,
