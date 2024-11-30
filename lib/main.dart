@@ -1,7 +1,6 @@
 import 'package:banking_app/config/routes/application.dart';
 import 'package:banking_app/config/routes/routes.dart';
 import 'package:banking_app/config/theme/app_themes.dart';
-import 'package:banking_app/features/shopping/data/data_sources/local/storage.dart';
 import 'package:banking_app/injection_container.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +10,6 @@ void main() {
   initializeDependencies();
 
   WidgetsFlutterBinding.ensureInitialized();
-  Storage();
 
   /// Init router
   final router = FluroRouter();
@@ -39,7 +37,7 @@ class MyApp extends StatelessWidget {
                 darkTheme: AppTheme.currentTheme.lightTheme,
                 themeMode: currentMode,
                 onGenerateRoute: Application.router?.generator,
-                initialRoute: Routes.bankingHome,
+                initialRoute: Routes.login,
               );
             },
           );
