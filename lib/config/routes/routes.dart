@@ -4,7 +4,7 @@ import 'package:fluro/fluro.dart';
 class Routes {
   /// Router path
   static String login = "/login";
-  static String bankingHome = "/banking_home";
+  static String bankingMain = "/banking_main";
 
   /// Setup route for the app
   static void configureRoutes(FluroRouter router) {
@@ -17,8 +17,8 @@ class Routes {
     );
 
     router.define(
-      bankingHome,
-      handler: bankingHomeHandler,
+      bankingMain,
+      handler: bankingMainHandler,
       transitionType: TransitionType.inFromRight,
     );
   }

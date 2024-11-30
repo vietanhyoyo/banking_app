@@ -98,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                     builder: (context, state) {
                       if (state.isSubmitting) {
                         WidgetsBinding.instance.addPostFrameCallback((_) {
-                          Application.navigateTo(context, Routes.bankingHome,
+                          Application.navigateTo(context, Routes.bankingMain,
                               replace: true);
                         });
                         return const SizedBox();

@@ -7,7 +7,10 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CusBottomNavigationBar extends StatelessWidget {
-  const CusBottomNavigationBar({super.key});
+  final int value;
+  final Function(int value) onChangeIndex;
+  const CusBottomNavigationBar(
+      {super.key, required this.value, required this.onChangeIndex});
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +23,12 @@ class CusBottomNavigationBar extends StatelessWidget {
 
     return AnimatedBottomNavigationBar.builder(
         backgroundColor: AppColors.white,
-        activeIndex: 0,
+        activeIndex: value,
         elevation: 0,
         height: 66,
-        onTap: (int) {},
+        onTap: (index) {
+          onChangeIndex(index);
+        },
         itemCount: iconList.length,
         gapLocation: GapLocation.center,
         leftCornerRadius: 16,
