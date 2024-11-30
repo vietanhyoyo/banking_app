@@ -31,7 +31,9 @@ class BankingMainPage extends StatelessWidget {
           bottomNavigationBar: CusBottomNavigationBar(
             value: state.bottomBarIndex,
             onChangeIndex: (value) {
-              _pageController.jumpToPage(value);
+              _pageController.animateToPage(value,
+                  duration: Duration(milliseconds: 500),
+                  curve: Curves.ease);
               context.read<BankingMainBloc>().add(BottomBarIndexChanged(value));
             },
           ),
@@ -71,6 +73,7 @@ class BankingMainPage extends StatelessWidget {
   Widget _buildBody(BuildContext context, BankingMainState state) {
     return PageView.builder(
         controller: _pageController,
+        itemCount: _listPage.length,
         itemBuilder: (context, index) {
           return _listPage[index];
         },

@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
                 darkTheme: AppTheme.currentTheme.lightTheme,
                 themeMode: currentMode,
                 onGenerateRoute: Application.router?.generator,
-                initialRoute: Routes.login,
+                initialRoute: Routes.bankingMain,
               );
             },
           );

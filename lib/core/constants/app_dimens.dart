@@ -41,15 +41,21 @@ class ResSpace {
     );
   }
 
-  static h14() {
+  static h10() {
     return SizedBox(
-      height: AppDimens.d14.sp,
+      height: AppDimens.d10.sp,
     );
   }
 
   static h12() {
     return SizedBox(
       height: AppDimens.d12.sp,
+    );
+  }
+
+  static h14() {
+    return SizedBox(
+      height: AppDimens.d14.sp,
     );
   }
 
