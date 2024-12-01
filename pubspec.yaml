@@ -130,6 +130,7 @@ flutter:
     - assets/images/category/
     - assets/images/background/
     - assets/images/meal/
+    - assets/images/cards/
     - assets/jsons/
 
   # An image asset can refer to one or more resolution-specific "variants", see

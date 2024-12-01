@@ -27,13 +27,13 @@ class BankingMainPage extends StatelessWidget {
         return Scaffold(
           appBar: CusAppbar(),
           body: _buildBody(context, state),
+          // body: BankingCardPage(),
           backgroundColor: AppColors.neutral3,
           bottomNavigationBar: CusBottomNavigationBar(
             value: state.bottomBarIndex,
             onChangeIndex: (value) {
               _pageController.animateToPage(value,
-                  duration: Duration(milliseconds: 500),
-                  curve: Curves.ease);
+                  duration: Duration(milliseconds: 500), curve: Curves.ease);
               context.read<BankingMainBloc>().add(BottomBarIndexChanged(value));
             },
           ),

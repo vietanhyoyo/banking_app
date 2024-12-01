@@ -3,6 +3,7 @@ import 'package:banking_app/core/constants/app_dimens.dart';
 import 'package:banking_app/core/constants/app_text_style.dart';
 import 'package:banking_app/features/banking/presentation/widgets/cus_card.dart';
 import 'package:banking_app/features/banking/presentation/widgets/dashed_circle.dart';
+import 'package:banking_app/features/banking/presentation/widgets/swipe_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -49,7 +50,7 @@ class BankingCardPage extends StatelessWidget {
         "amount": "-\$10.93"
       },
       {
-        "iconPath": "assets/svgs/school_icon.svg",
+        "iconPath": "assets/svgs/school2_icon.svg",
         "iconColor": AppColors.secondary,
         "containerColor": AppColors.secondary.withOpacity(0.2),
         "title": "Tuition",
@@ -58,23 +59,34 @@ class BankingCardPage extends StatelessWidget {
       },
     ];
 
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 24.sp),
+    return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ResSpace.h10(),
-          _buildActionCard(items),
+          SwipeBody(),
           ResSpace.h10(),
-          Text("Recent Transactions", style: AppText.labelLG),
-          ...transactions.map((transaction) => HistoryCard(
-                iconPath: transaction['iconPath'] as String,
-                iconColor: transaction['iconColor'] as Color,
-                containerColor: transaction['containerColor'] as Color,
-                title: transaction['title'] as String,
-                subtitle: transaction['subtitle'] as String,
-                amount: transaction['amount'] as String,
-              )),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 24.sp),
+            child: Column(
+              children: [
+                _buildActionCard(items),
+                ResSpace.h10(),
+                Text("Recent Transactions", style: AppText.labelLG),
+                ...transactions.map((transaction) => HistoryCard(
+                      iconPath: transaction['iconPath'] as String,
+                      iconColor: transaction['iconColor'] as Color,
+                      containerColor: transaction['containerColor'] as Color,
+                      title: transaction['title'] as String,
+                      subtitle: transaction['subtitle'] as String,
+                      amount: transaction['amount'] as String,
+                    )),
+                ResSpace.h200(),
+                ResSpace.h200(),
+                ResSpace.h200(),
+              ],
+            ),
+          ),
         ],
       ),
     );
