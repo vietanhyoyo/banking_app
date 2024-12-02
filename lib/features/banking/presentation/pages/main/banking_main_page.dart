@@ -33,7 +33,7 @@ class BankingMainPage extends StatelessWidget {
             value: state.bottomBarIndex,
             onChangeIndex: (value) {
               _pageController.animateToPage(value,
-                  duration: Duration(milliseconds: 500), curve: Curves.ease);
+                  duration: const Duration(milliseconds: 500), curve: Curves.ease);
               context.read<BankingMainBloc>().add(BottomBarIndexChanged(value));
             },
           ),
@@ -72,6 +72,7 @@ class BankingMainPage extends StatelessWidget {
 
   Widget _buildBody(BuildContext context, BankingMainState state) {
     return PageView.builder(
+      physics: const NeverScrollableScrollPhysics(),
         controller: _pageController,
         itemCount: _listPage.length,
         itemBuilder: (context, index) {

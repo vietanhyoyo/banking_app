@@ -63,12 +63,12 @@ class BankingCardPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ResSpace.h10(),
           SwipeBody(),
           ResSpace.h10(),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 24.sp),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 _buildActionCard(items),
                 ResSpace.h10(),
